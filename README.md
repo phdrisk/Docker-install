@@ -33,4 +33,5 @@ docker cp /PASTA_DESTINO NOME-CONTAINER:/PASTA
 # DOCKER-MACHINE
 ## COMANDOS
 docker-machine create -d virtualbox NOME-NODE ( CRIA A MAQUINA-NODE)
+
 docker-machine ssh NOME -> acessa a maquina node
