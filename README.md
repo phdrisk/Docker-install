@@ -11,6 +11,9 @@ Instalaçao Correta do Docker
 ## 7) snap enable docker
 # REFERENCIA
 site: https://github.com/docker/docker-snap
+# DOCKER COMANDOS
+- run, start, stop, ps, ps -a, images, commit 
+- install dentro do container: tce-load -wi htop
 
 # DOCKER - COMPARTILHAMENTO E MONTAGEM DE PASTA
  docker run -itd --name NOME-CONTAINER -v /DOCKER@PASTA/DOCKER@PASTA/:/PASTA-DO-CONTAINER/PASTA-DO-CONTAINER NOME-IMAGE
@@ -29,4 +32,5 @@ docker cp /PASTA_DESTINO NOME-CONTAINER:/PASTA
 
 # DOCKER-MACHINE
 ## COMANDOS
-docker-machine ssh NOME -> acessa a maquina docker
+docker-machine create -d virtualbox NOME-NODE ( CRIA A MAQUINA-NODE)
+docker-machine ssh NOME -> acessa a maquina node
