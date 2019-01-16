@@ -10,7 +10,9 @@ Instalaçao Correta do Docker
 ## 6) snap disable docker
 ## 7) snap enable docker
 # REFERENCIA
-site: https://github.com/docker/docker-snap
+- [snap] site: https://github.com/docker/docker-snap
+- [rede externa] site: https://stackoverflow.com/questions/36922007/how-to-connect-to-a-docker-container-from-outside-the-host-same-network-osx-1
+
 # DOCKER COMANDOS
 - run, start, stop, ps, ps -a, images, commit 
 - install dentro do container: tce-load -wi htop
