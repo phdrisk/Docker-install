@@ -41,6 +41,6 @@ docker-machine ssh NOME -> acessa a maquina node
 
 # DOCKER - VOLUME
 
-- $ docker-machine ssh phdrisk mkdir foo ( cria o volume dentro do docker)
-- $ docker-machine mount dev:/home/docker/foo pastaLocal ( monta a pasta do docker na pasta local )
-### importante: a montante deve ser fora da pasta local
+- a) $ docker-machine ssh phdrisk mkdir foo ( cria o volume dentro do docker)
+- b) $ docker-machine mount dev:/home/docker/foo pastaLocal ( monta a pasta do docker na pasta local )
+### importante: a montagem deve ser fora da pasta local (b)
