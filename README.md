@@ -37,3 +37,10 @@ docker cp /PASTA_DESTINO NOME-CONTAINER:/PASTA
 docker-machine create -d virtualbox NOME-NODE ( CRIA A MAQUINA-NODE)
 
 docker-machine ssh NOME -> acessa a maquina node
+
+
+# DOCKER - VOLUME
+
+- $ docker-machine ssh phdrisk mkdir foo ( cria o volume dentro do docker)
+- $ docker-machine mount dev:/home/docker/foo pastaLocal ( monta a pasta do docker na pasta local )
+### importante: a montante deve ser fora da pasta local
