@@ -32,13 +32,13 @@ docker cp NOME-CONTAINER:/PASTA /PASTA_DESTINO [DENTRO PARA FORA]
 docker cp /PASTA_DESTINO NOME-CONTAINER:/PASTA
 
 # DOCKER - COPIA ARQUIVOS DOCKER-MACHINE - DOCKER CONTAINER
-1) MOUNT O ARQUIVO: O VOLUME
+1) MOUNT O ARQUIVO
  
- a) crie a pasta ex. foo na maquina
- 
- b) cria a pasta dentro do docker-machine 
- 
- c) mount a pasta para fora : docker-machine mount phdrisk:/home/docker/foo foo
+ a) crie a pasta  na maquina: ex. ~/foo
+ b) cria a pasta dentro do docker-machine  ex. /home/docker/teste
+ c) mount a pasta: docker-machine mount phdrisk:/home/docker/teste foo
+ d) copie para dentro da pasta cp -r shiny/Petrobras6/ foo (local)
+  
 
 2) COPIE PARA DENTRO DO DOCKER-MACHIME
 
@@ -72,5 +72,15 @@ docker-machine ssh NOME -> acessa a maquina node
 importante os vinculos sao criados, entretanto o rstudio nao deixa alterar ou criar pastas no app
 
 deve-se altear o usuario e dono da pasta /home/rstudio/ShinyApps# chown -Rf rstudio:rstudio 01_hello
+
+# INSTALANDO PACOTES PARA O R_SHINY FUNCIONAR
+- apt instal libv8-dev
+library(devtools)
+install_github('lhmet/inmetr')
+install.packages("V8")
+
+# DOCKERHUB
+-usuario phdriskdocker
+
 
 
