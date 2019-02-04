@@ -69,6 +69,8 @@ docker-machine ssh NOME -> acessa a maquina node
 # DOCKER CONTAINER RSTUDIO/SHINY
 -link : https://bioconductor.org/packages/release/bioc/vignettes/sevenbridges/inst/doc/rstudio.html
 
+docker run  --privileged -d -p 8787:8787 -p 3838:3838 --name rstudio_shiny_server sevenbridges/sevenbridges-r
+
 importante os vinculos sao criados, entretanto o rstudio nao deixa alterar ou criar pastas no app
 
 deve-se altear o usuario e dono da pasta /home/rstudio/ShinyApps# chown -Rf rstudio:rstudio 01_hello
