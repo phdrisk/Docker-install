@@ -46,9 +46,11 @@ docker-machine ssh NOME -> acessa a maquina node
 ### importante: a montagem deve ser fora da pasta local (b)
 ### referencia: https://docs.docker.com/machine/reference/mount/
 
-#DOCKER CONTAINER RSTUDIO/SHINY
+# DOCKER CONTAINER RSTUDIO/SHINY
 -link : https://bioconductor.org/packages/release/bioc/vignettes/sevenbridges/inst/doc/rstudio.html
-### importante os vinculos sao criados, entretanto o rstudio nao deixa alterar ou criar pastas no app
-### deve-se altear o usuario e dono da pasta /home/rstudio/ShinyApps# chown -Rf rstudio:rstudio 01_hello
+
+importante os vinculos sao criados, entretanto o rstudio nao deixa alterar ou criar pastas no app
+
+deve-se altear o usuario e dono da pasta /home/rstudio/ShinyApps# chown -Rf rstudio:rstudio 01_hello
 
 
