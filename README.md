@@ -75,8 +75,12 @@ deve-se altear o usuario e dono da pasta /home/rstudio/ShinyApps# chown -Rf rstu
 
 # INSTALANDO PACOTES PARA O R_SHINY FUNCIONAR
 - apt instal libv8-dev
+
+
 library(devtools)
+
 install_github('lhmet/inmetr')
+
 install.packages("V8")
 
 # DOCKERHUB
