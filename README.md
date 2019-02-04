@@ -29,11 +29,31 @@ Ex. run --rm -itd --name shiny -p 3838:3838 rocker/rshiny
 
 # DOCKER - COPIA ARQUIVOS
 docker cp NOME-CONTAINER:/PASTA /PASTA_DESTINO [DENTRO PARA FORA]
-
 docker cp /PASTA_DESTINO NOME-CONTAINER:/PASTA
+
+# DOCKER - COPIA ARQUIVOS DOCKER-MACHINE - DOCKER CONTAINER
+1) MOUNT O ARQUIVO: O VOLUME
+ 
+ a) crie a pasta ex. foo na maquina
+ 
+ b) cria a pasta dentro do docker-machine 
+ 
+ c) mount a pasta para fora : docker-machine mount phdrisk:/home/docker/foo foo
+
+2) COPIE PARA DENTRO DO DOCKER-MACHIME
+
+phdrisk@phdrisk-desktop:~/shiny$ docker-machine scp -r Petrobras6/  phdrisk:/home/docker/transferencias/
+
+3) COPIE PARA DENTRO DO DOCKER-CONTAINER
+
+docker@phdrisk:~/transferencias$ docker cp Petrobras6 rstudio_shiny:/home/rstudio/ShinyApps/Petrobras
+
+
+
 
 # DOCKER-MACHINE
 ## COMANDOS
+
 docker-machine create -d virtualbox NOME-NODE ( CRIA A MAQUINA-NODE)
 
 docker-machine ssh NOME -> acessa a maquina node
