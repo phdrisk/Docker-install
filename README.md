@@ -80,7 +80,8 @@ install_github('lhmet/inmetr')
 install.packages("V8")
 
 # DOCKERHUB
--usuario phdriskdocker
-
-
+- usuario phdriskdocker
+- docker login
+- criar uma TAG : docker tag id ou nome phdriskdocker/nome [antes da barra deve ser sempre o usuario da conta]
+- docker push phdriskdocker/nome_image
 
