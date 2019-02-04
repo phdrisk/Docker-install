@@ -34,10 +34,10 @@ docker cp /PASTA_DESTINO NOME-CONTAINER:/PASTA
 # DOCKER - COPIA ARQUIVOS DOCKER-MACHINE - DOCKER CONTAINER
 1) MOUNT O ARQUIVO
  
- a) crie a pasta  na maquina: ex. ~/foo
- b) cria a pasta dentro do docker-machine  ex. /home/docker/teste
- c) mount a pasta: docker-machine mount phdrisk:/home/docker/teste foo
- d) copie para dentro da pasta cp -r shiny/Petrobras6/ foo (local)
+ - a) crie a pasta  na maquina: ex. ~/foo
+ - b) cria a pasta dentro do docker-machine  ex. /home/docker/teste
+ - c) mount a pasta: docker-machine mount phdrisk:/home/docker/teste foo
+ - d) copie para dentro da pasta cp -r shiny/Petrobras6/ foo (local)
   
 
 2) COPIE PARA DENTRO DO DOCKER-MACHIME
