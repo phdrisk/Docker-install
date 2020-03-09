@@ -53,6 +53,9 @@ docker run -d -it -p 3838:3838 -v /srv/shinyapps/:/srv/shiny-server/ -v /srv/shi
 
 docker run -it -p 8787:8787 -e PASSWORD=phdrisk -v /srv/shinyapps/:/home/rstudio/shinyapps  --name phdrstudio rocker/rstudio
 
+::: obs no rstudio deve-se instalar o sudo apt install default-jre
+
+
 # DOCKER-MACHINE
 ## COMANDOS
 
