@@ -48,11 +48,14 @@ phdrisk@phdrisk-desktop:~/shiny$ docker-machine scp -r Petrobras6/  phdrisk:/hom
 
 docker@phdrisk:~/transferencias$ docker cp Petrobras6 rstudio_shiny:/home/rstudio/ShinyApps/Petrobras
 
+# DOCKER ( SHINY E RSTUDIO) - UTILIZANDO MESMA DIRETORIA FORA
+docker run -d -it -p 3838:3838 -v /srv/shinyapps/:/srv/shiny-server/ -v /srv/shinylog/:/var/log/shiny-server/ --name phdshiny rocker/shiny
 
-
+docker run -it -p 8787:8787 -e PASSWORD=phdrisk -v /srv/shinyapps/:/home/rstudio/shinyapps  --name phdrstudio rocker/rstudio
 
 # DOCKER-MACHINE
 ## COMANDOS
+
 
 docker-machine create -d virtualbox NOME-NODE ( CRIA A MAQUINA-NODE)
 
