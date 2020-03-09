@@ -49,9 +49,9 @@ phdrisk@phdrisk-desktop:~/shiny$ docker-machine scp -r Petrobras6/  phdrisk:/hom
 docker@phdrisk:~/transferencias$ docker cp Petrobras6 rstudio_shiny:/home/rstudio/ShinyApps/Petrobras
 
 # DOCKER ( SHINY E RSTUDIO) - UTILIZANDO MESMA DIRETORIA FORA
-docker run -d -it -p 3838:3838 -v /srv/shinyapps/:/srv/shiny-server/ -v /srv/shinylog/:/var/log/shiny-server/ --name phdshiny rocker/shiny
+docker run -d -itd -p 3838:3838 -v /srv/shinyapps/:/srv/shiny-server/ -v /srv/shinylog/:/var/log/shiny-server/ --name phdshiny rocker/shiny
 
-docker run -it -p 8787:8787 -e PASSWORD=phdrisk -v /srv/shinyapps/:/home/rstudio/shinyapps  --name phdrstudio rocker/rstudio
+docker run -itd -p 8787:8787 -e PASSWORD=phdrisk -v /srv/shinyapps/:/home/rstudio/shinyapps  --name phdrstudio rocker/rstudio
 
 ::: obs no rstudio deve-se instalar o sudo apt install default-jre
 
