@@ -84,6 +84,11 @@ deve-se altear o usuario e dono da pasta /home/rstudio/ShinyApps# chown -Rf rstu
 # DOCKERHUB
 - usuario phdriskdocker
 - docker login
-- criar uma TAG : docker tag id ou nome phdriskdocker/nome [antes da barra deve ser sempre o usuario da conta]
-- docker push phdriskdocker/nome_image
 
+## criar uma TAG - para exportar para o dockerhub
+- docker tag rocker/shiny phdriskdocker/shiny:version1 {rocker/shiny e o nome da imagem ja existente}
+- docker push phdriskdocker/shiny:version1 
+
+- docker imagens - lista os tagnames
+
+- docker rmi phdriskdocker/shiny:version1 {remove a imagem tag}
