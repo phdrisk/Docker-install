@@ -92,3 +92,8 @@ deve-se altear o usuario e dono da pasta /home/rstudio/ShinyApps# chown -Rf rstu
 - docker imagens - lista os tagnames
 
 - docker rmi phdriskdocker/shiny:version1 {remove a imagem tag}
+# PORTAINER
+```
+docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /home/renatogroffe/Desenvolvimento/Portainer/data:/data portainer/portainer
+```
+
