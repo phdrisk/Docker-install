@@ -59,7 +59,15 @@ docker-machine create -d virtualbox NOME-NODE ( CRIA A MAQUINA-NODE)
 docker-machine ssh NOME -> acessa a maquina node
 
 
+# DOCKER - VOLUME LOCLA
+```
+MONTA O CONTAINER COM UM PASTA COMO VOLUME LOCAL ** IMPORANTE A PASTA INTERNA NO DOCKER DEVE SER GERADO PELO DOCKER RUN, NUNCA PELO DOCKER FILE
+
+docker run -d -p 20006:3838 -v /home/phdrisk/Documents/shinyproxy/pastaVolume/dados:/root/app/dados --name NomeContainer IMAGEM
+
+```
 # DOCKER - VOLUME
+
 
 - a) $ docker-machine ssh phdrisk mkdir foo ( cria o volume dentro do docker)
 - b) $ docker-machine mount dev:/home/docker/foo pastaLocal ( monta a pasta do docker na pasta local )
