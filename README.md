@@ -28,9 +28,13 @@ Ex. run --rm -itd --name shiny -p 3838:3838 rocker/rshiny
 [cria um container shiny na porta 3838 e disponibiliza na mesma porta]
 
 # DOCKER - COPIA ARQUIVOS
+```
 docker cp NOME-CONTAINER:/PASTA /PASTA_DESTINO [DENTRO PARA FORA]
 docker cp /PASTA_DESTINO NOME-CONTAINER:/PASTA
 
+docker cp phdriskrstudio14:/home/rstudio/shiny-server/saude <-(pasta docker)  /home/phdrisk/saude <-(pasta servidor)
+
+```
 # DOCKER - COPIA ARQUIVOS DOCKER-MACHINE - DOCKER CONTAINER
 1) MOUNT O ARQUIVO
  
