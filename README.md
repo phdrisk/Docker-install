@@ -13,6 +13,12 @@ Instalaçao Correta do Docker
 - [snap] site: https://github.com/docker/docker-snap
 - [rede externa] site: https://stackoverflow.com/questions/36922007/how-to-connect-to-a-docker-container-from-outside-the-host-same-network-osx-1
 
+# DOCKER CONTAINER DOCKFILE OUTRO DIR
+```
+docker build -t apl_bdr01  -f  dockerfiles/Dockerfile01 .
+```
+
+
 # DOCKER COMANDOS
 - run, start, stop, ps, ps -a, images, commit 
 - install dentro do container: tce-load -wi htop
@@ -63,7 +69,7 @@ docker-machine create -d virtualbox NOME-NODE ( CRIA A MAQUINA-NODE)
 docker-machine ssh NOME -> acessa a maquina node
 
 
-# DOCKER - VOLUME LOCLA
+# DOCKER - VOLUME LOCAL
 ```
 MONTA O CONTAINER COM UM PASTA COMO VOLUME LOCAL ** IMPORANTE A PASTA INTERNA NO DOCKER DEVE SER GERADO PELO DOCKER RUN, NUNCA PELO DOCKER FILE
 
@@ -108,4 +114,6 @@ deve-se altear o usuario e dono da pasta /home/rstudio/ShinyApps# chown -Rf rstu
 ```
 docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /home/renatogroffe/Desenvolvimento/Portainer/data:/data portainer/portainer
 ```
+
+
 
