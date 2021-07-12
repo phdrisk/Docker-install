@@ -15,7 +15,7 @@ Instalaçao Correta do Docker
 
 # DOCKER CONTAINER DOCKFILE OUTRO DIR
 ```
-docker build -t apl_bdr01  -f  dockerfiles/Dockerfile01 .
+docker build -t apl_bdr01  -f  dockerfiles/Dockerfile01 ../ ( [../] importante para voltar a pagina anterior...caso os executaveis estavem nela)
 ```
 
 
